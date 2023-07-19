@@ -1,7 +1,0 @@
-What I learned from Javascript Drum Kit
-
-The script uses a window.EventListener to listen for a 'keydown' event, which triggers playSound() 
-  
-window.addEventListener('keydown', playSound)
-
-
