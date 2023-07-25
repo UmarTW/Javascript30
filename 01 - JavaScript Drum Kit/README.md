@@ -1,12 +1,14 @@
 ## Javascript Drum Kit
-Script listens for keystrokes with keycodes corresponding to the ones displayed on screen. On match, audio is played and key transforms. 
+Script listens for keydown event with keycodes corresponding to the ones displayed on screen. On match, audio is played and key transforms. 
 
 ![](images/screenshot.png)
 
 click <a href="">here<a/> for demo.
 
 ### Process 
-When a keycode is matched, it's attached audio is played,and a class .playing is added to it for the transform
+`document.querySelector` is used to bind the pressed key with it's corresponding `<audio>` element, and it's `<div>` using their assigned `data-key` attribute.
+
+When a keycode is matched, it's attached audio is played,and a class .playing is added to it for the transform.
 ```
 function playSound(e) {
   const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
